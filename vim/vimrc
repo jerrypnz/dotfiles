@@ -152,6 +152,9 @@ set guifont=Droid\ Sans\ Mono\ 10
 set guifontwide=iYahei\ 10
 set shell=/bin/bash
 
+" Show line number
+set nu
+
 if has("gui_running")
   set guioptions-=T
   set guioptions-=m
@@ -159,12 +162,9 @@ if has("gui_running")
   set background=dark
   colorscheme peaksea
 
-  set nu
 else
   colorscheme zellner
   set background=dark
-  
-  set nonu
 endif
 
 set encoding=utf8
@@ -489,6 +489,8 @@ map <leader>s? z=
 """"""""""""""""""""""""""""""
 au FileType python set nocindent
 let python_highlight_all = 1
+"The path of pydiction dictionary file
+let g:pydiction_location = '/home/jerry/.vim/complete-dict'
 au FileType python syn keyword pythonDecorator True None False self
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
