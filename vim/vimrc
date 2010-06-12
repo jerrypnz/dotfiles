@@ -147,25 +147,25 @@ set t_vb=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax hl
 
-" Set font according to system
-set guifont=Droid\ Sans\ Mono\ 10
-set guifontwide=iYahei\ 10
 set shell=/bin/bash
 
 " Show line number
 set nu
 
 if has("gui_running")
+  set guifont=Monaco\ 10
+  set guifontwide=iYahei\ 10
   set guioptions-=T
   set guioptions-=m
   set t_Co=256
   set background=dark
-  colorscheme peaksea
 
 else
   colorscheme zellner
   set background=dark
 endif
+
+colorscheme peaksea
 
 set encoding=utf8
 try
@@ -576,7 +576,7 @@ map <F5> :make<CR>
 
 "Set default lines and columns for GUI
 if has("gui_running")
-    set lines=75 columns=160
+    set lines=40 columns=150
 endif
 
 "Search and replace the word under the cursor
