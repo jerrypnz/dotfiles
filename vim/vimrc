@@ -580,4 +580,4 @@ if has("gui_running")
 endif
 
 "Search and replace the word under the cursor
-nnoremap <Leader>r :%s/\<<C-r><C-w>\>/
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
