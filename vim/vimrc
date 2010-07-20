@@ -583,4 +583,4 @@ endif
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
 
 "Vim WIKI configurations
-let g:vimwiki_list = [{}, {'path': '~/document/wiki', 'path_html': '~/document/wiki/html'}]
+let g:vimwiki_list = [{}, {'path': '~/document/wiki', 'path_html': '~/document/wiki/html', 'auto_export': 1}]
