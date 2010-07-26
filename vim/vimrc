@@ -321,8 +321,8 @@ map <leader>bd :Bclose<cr>
 map <leader>ba :1,300 bd!<cr>
 
 " Use the arrows to something usefull
-map <right> :bn<cr>
-map <left> :bp<cr>
+map <C-tab> :bn<cr>
+map <C-S-tab> :bp<cr>
 
 " Tab configuration
 map <leader>tn :tabnew %<cr>
@@ -455,8 +455,8 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplVSplit = 25
-let g:miniBufExplSplitBelow=1
+" let g:miniBufExplVSplit = 25
+" let g:miniBufExplSplitBelow=1
 
 let g:bufExplorerSortBy = "name"
 
@@ -581,6 +581,9 @@ endif
 
 "Search and replace the word under the cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
+
+"Custom key for C-]
+noremap <C-i> <C-]>
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki', 'path_html': '~/document/wiki/html', 'auto_export': 1}]
