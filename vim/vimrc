@@ -74,6 +74,11 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call pathogen#runtime_append_all_bundles()
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -489,8 +494,6 @@ map <leader>s? z=
 """"""""""""""""""""""""""""""
 au FileType python set nocindent
 let python_highlight_all = 1
-"The path of pydiction dictionary file
-let g:pydiction_location = '/home/jerry/.vim/complete-dict'
 au FileType python syn keyword pythonDecorator True None False self
 
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
@@ -558,7 +561,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 map <leader>q :e ~/buffer<cr>
 
 "Generate the help tags
-helptags ~/.vim/doc
+"helptags ~/.vim/doc
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -582,8 +585,11 @@ endif
 "Search and replace the word under the cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
 
-"Custom key for C-]
+"My Custom keys 
 noremap <C-i> <C-]>
+noremap <C-c> "+
+vnoremap <C-c> "+y
+noremap <C-a> ggVG
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki', 'path_html': '~/document/wiki/html', 'auto_export': 1}]

@@ -1,4 +1,4 @@
-#Thu Jun 17 10:07:00 CST 2010
+#Tue Jul 27 15:03:56 CST 2010
 /instance/org.eclipse.jdt.ui/sp_cleanup.always_use_parentheses_in_expressions=false
 /instance/org.eclipse.team.ui/org.eclipse.team.ui.first_time=false
 /instance/org.eclipse.jdt.ui/java_operator=207,191,173
@@ -141,14 +141,12 @@
 /instance/org.eclipse.wst.jsdt.ui/java_default=220,220,204
 /instance/org.eclipse.wst.xsl.core/TEMPLATE_CONFLICT=2
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation=18
-/instance/com.ess.regexutil/defaultText=mac\=0002465843a5&pf\=general1&xy\=2&t1\=1&r1\=2&t2\=1&r2\=2&a1\=123&p1\=123&a2\=1234&p2\=1234
 /instance/org.eclipse.mylyn.java.ui/org.eclipse.mylyn.java.ui.run.count.3_1_0=1
 /instance/org.eclipse.mylyn.tasks.ui/org.eclipse.mylyn.tasks.ui.group.subtasks=false
 /instance/org.eclipse.wst.wsdl.ui/org.eclipse.wst.wsdl.ui.internal.defaultpage=org.eclipse.wst.wsdl.ui.internal.sourcepage
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_method_invocation_arguments=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=/opt/eclipse/plugins/org.junit_3.8.2.v20090203-1005/
 /instance/org.eclipse.wst.ws.service.policy/org.eclipse.wst.ws.service.policy.ui.servicepols.wsiprofilecomp.wsissbp.defaultProtocol=http\://schemas.xmlsoap.org/wsdl/soap/
-/instance/com.ess.regexutil/defaultMode=3
 /instance/org.eclipse.jdt.ui/sp_cleanup.make_private_fields_final=true
 @org.eclipse.wst.xml.xpath.ui=1.0.0.v200904240436
 /instance/org.eclipse.wst.html.ui/declBoder=\#9ec5eb | \#ffffff | false | false | false | false
@@ -196,7 +194,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.tabulation.size=4
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_switch=false
 /instance/org.eclipse.jdt.ui/useQuickDiffPrefPage=true
-@org.eclipse.mylyn.tasks.ui=3.3.2.v20100222-0100-e3x
+@org.eclipse.mylyn.tasks.ui=3.4.0.v20100608-0100-e3x
 /instance/org.eclipse.wst.jsdt.ui/org.eclipse.wst.jsdt.internal.ui.navigator.layout=1
 /instance/org.eclipse.ui.editors/lineNumberColor=133,172,141
 /instance/org.eclipse.wst.validation/vals/org.eclipse.jst.jsf.ui.JSFNonELAttributeValueValidator/global=TF01
@@ -227,7 +225,7 @@
 /instance/org.eclipse.ant.ui/org.eclipse.ant.ui.constantStringsColor=204,147,147
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_between_empty_parens_in_method_invocation=do not insert
 /instance/org.eclipse.wst.jsdt.ui/java_operator=207,191,173
-/instance/org.eclipse.jst.jsp.core/org.eclipse.jst.jsp.core.taglib.TaglibIndex=DIRTY
+/instance/org.eclipse.jst.jsp.core/org.eclipse.jst.jsp.core.taglib.TaglibIndex=CLEAN
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_comma_in_parameterized_type_reference=insert
 @org.eclipse.gmf.bridge.ui=1.2.1.v20090812-1620
 /instance/org.eclipse.ui.workbench/pref_skip_goto_action_prompt=always
@@ -272,17 +270,18 @@
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_missing_nls_tags=false
 /instance/org.eclipse.ui.views.log/groupBy=0
 /instance/org.eclipse.mylyn.context.ui/org.eclipse.mylyn.ui.perspectives.task.none=org.eclipse.jdt.ui.JavaPerspective
+/instance/org.eclipse.core.runtime/content-types/org.eclipse.jdt.core.javaSource/file-extensions=scala
 /instance/org.eclipse.jst.jsp.ui/tagAttributeValue=\#cc9393 | null | false | true | false | false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_closing_bracket_in_array_reference=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
-@org.eclipse.mylyn.java.ui=3.3.2.v20100222-0100-e3x
+@org.eclipse.mylyn.java.ui=3.4.0.v20100608-0100-e3x
 /instance/org.eclipse.wst.jsdt.ui/proposalOrderMigrated=true
 /instance/org.eclipse.wst.validation/vals/org.eclipse.jst.jsp.core.JSPContentValidator/global=TF01
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_catch=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_for=insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_in_empty_annotation_declaration=insert
 /instance/org.eclipse.jdt.ui/semanticHighlighting.annotation.enabled=false
-/instance/org.eclipse.ui.ide/platformState=1275475050971
+/instance/org.eclipse.ui.ide/platformState=1279509914732
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_while=do not insert
 /instance/org.eclipse.jdt.ui/org.eclipse.pde.ui.ExternalPluginLibrariesFilter1=true
 /instance/org.eclipse.datatools.sqltools.sqleditor/PreferenceConstants.EXECUTE_SQL_ERROR_MODE=PreferenceConstants.PROMPT_MODE_NEVER
@@ -368,7 +367,7 @@
 /instance/jp.gr.java_conf.ussiy.app.propedit/commentColor=127,159,127
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Field_color=0,128,0
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_colon_in_conditional=insert
-/instance/com.ess.regexutil/defaultRegex=&[^\=]+\=
+/instance/com.ess.regexutil/defaultRegex=(true)|(yes)|(1)
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_before_closing_brace_in_array_initializer=do not insert
 /instance/org.eclipse.mylyn.monitor.ui/org.eclipse.mylyn.monitor.user.activity.enabled=true
 /instance/org.eclipse.uml2.diagram.clazz/print.page.height=11.692913385826772
@@ -390,7 +389,7 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_synchronized=do not insert
 /instance/org.eclipse.wst.html.ui/tagName=\#9ec5eb | null | false | false | false | false
 /instance/org.eclipse.jdt.ui/semanticHighlighting.staticFinalField.color=83,220,205
-/configuration/org.eclipse.ui.ide/SHOW_WORKSPACE_SELECTION_DIALOG=true
+/configuration/org.eclipse.ui.ide/SHOW_WORKSPACE_SELECTION_DIALOG=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.brace_position_for_anonymous_type_declaration=end_of_line
 /instance/org.eclipse.mylyn.java.ui/org.eclipse.mylyn.ui.first.run.0_4_9=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_closing_paren_in_if=do not insert
@@ -478,10 +477,10 @@
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.formatterprofiles.version=11
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.blank_lines_before_method=1
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_in_empty_anonymous_type_declaration=insert
-/instance/org.eclipse.team.ui/org.eclipse.team.ui.sychronizing_default_participant_sec_id=1276739679179
+/instance/org.eclipse.team.ui/org.eclipse.team.ui.sychronizing_default_participant_sec_id=1280110726368
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_comma_in_method_declaration_throws=do not insert
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter=true
-@org.eclipse.mylyn.monitor.ui=3.3.2.v20100222-0100-e3x
+@org.eclipse.mylyn.monitor.ui=3.4.0.v20100608-0100-e3x
 /instance/org.eclipse.ui.ide/PROBLEMS_FILTERS_MIGRATE=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_for=do not insert
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_parameter=do not insert
@@ -556,7 +555,9 @@
 /instance/org.eclipse.wst.xml.ui/tagAttributeValue=\#cc9393 | null | false | true | false | false
 @org.eclipse.ui.ide=3.5.2.M20100113-0800
 /instance/com.sysdeo.eclipse.tomcat/managerUser=admin
+@org.eclipse.core.runtime=3.5.0.v20090525
 /instance/org.eclipse.ui.workbench/overridepresentation=true
+/instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_trailing_whitespaces_ignore_empty=false
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticFunction_color=192,192,192
 @org.eclipse.rse.core=3.1.1.v200909160005
@@ -578,8 +579,9 @@
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_closing_angle_bracket_in_type_arguments=do not insert
 /instance/org.eclipse.equinox.p2.ui.sdk/day=Every day
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS2.Function_color=192,192,192
+/instance/org.eclipse.mylyn.tasks.ui/org.eclipse.mylyn.tasks.ui.servicemessage.id=0
 /instance/org.eclipse.wst.ws.service.policy/org.eclipse.wst.ws.service.policy.ui.servicepols.wsiprofilecomp.wsiap.defaultProtocol=http\://schemas.xmlsoap.org/wsdl/soap/
-/instance/org.eclipse.wst.sse.core/task-tag-projects-already-scanned=OneMS-BaseSystem,POI-Research,OneMS-BaseSystem-TWM,jxls-Research
+/instance/org.eclipse.wst.sse.core/task-tag-projects-already-scanned=OneMS-BaseSystem,POI-Research,OneMS-BaseSystem-TWM,jxls-Research,ClassLoaderDemo,learning-scala,OneMS-BaseSystem-QATAR
 /instance/org.eclipse.jdt.ui/sp_cleanup.correct_indentation=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.comment.format_source_code=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.number_of_blank_lines_at_beginning_of_method_body=0
@@ -684,7 +686,7 @@ file_export_version=3.0
 /instance/org.eclipse.wst.jsdt.ui/org.eclipse.wst.jsdt.ui.text.templates_migrated=true
 /instance/org.eclipse.wst.validation/USER_MANUAL_PREFERENCE=enabledManualValidatorListorg.eclipse.jst.j2ee.internal.classpathdep.ClasspathDependencyValidator;org.eclipse.jst.j2ee.internal.validation.UIEarValidator;org.eclipse.jst.j2ee.internal.jca.validation.UIConnectorValidator;org.eclipse.wst.common.componentcore.internal.ModuleCoreValidator;org.eclipse.jst.j2ee.internal.ejb.workbench.validation.UIEjbValidator;org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator;org.eclipse.jst.j2ee.internal.validation.UIApplicationClientValidator;org.eclipse.wst.wsi.ui.internal.WSIMessageValidator;
 /instance/org.eclipse.wst.xml.ui/tagAttributeName=\#dcdccc | null | false | false | false | false
-@org.eclipse.mylyn.context.core=3.3.2.v20100222-0100-e3x
+@org.eclipse.mylyn.context.core=3.4.0.v20100608-0100-e3x
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_question_in_wildcard=do not insert
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionForeground=204,220,144
 @org.eclipse.equinox.p2.ui.sdk=1.0.100.v20090520-1905
@@ -738,7 +740,7 @@ file_export_version=3.0
 @org.eclipse.epp.usagedata.recording=1.1.1.R201001291118
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_after_question_in_conditional=insert
 /instance/org.eclipse.jdt.ui/java_multi_line_comment=127,159,127
-@org.eclipse.mylyn.context.ui=3.3.2.v20100222-0100-e3x
+@org.eclipse.mylyn.context.ui=3.4.0.v20100608-0100-e3x
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_constructor_declaration=insert
 /instance/org.eclipse.wst.validation/DELEGATES_PREFERENCE=delegateValidatorList
 /instance/org.eclipse.ant.ui/problem_properties=ignore
@@ -790,7 +792,7 @@ file_export_version=3.0
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unused_private_types=true
 /instance/org.eclipse.debug.ui/org.eclipse.debug.ui.switch_perspective_on_suspend=always
 /instance/org.eclipse.jdt.ui/java_keyword_return_bold=false
-/instance/org.eclipse.jdt.ui/content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.workssys.share.device.inform.job.Job"><rhs name\="com.workssys.share.device.inform.job.TWMUpdateParamJob"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="com.jstudio.jxls.ReportBean"><rhs name\="com.jstudio.jxls.ReportBean"/><rhs name\="com.jstudio.jxls.inform.InformReportBean"/></lhs><lhs name\="com.jstudio.jxls.BaseReportRecord"><rhs name\="com.jstudio.jxls.FwReportRecord"/><rhs name\="com.jstudio.jxls.inform.InformReportRecord"/></lhs><lhs name\="net.sf.jxls.transformer.XLSTransformer"><rhs name\="net.sf.jxls.transformer.XLSTransformer"/></lhs><lhs name\="java.io.FilterInputStream"><rhs name\="java.io.BufferedInputStream"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.FileInputStream"/><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.FileOutputStream"/></lhs><lhs name\="java.io.BufferedInputStream"><rhs name\="java.io.BufferedInputStream"/></lhs><lhs name\="java.io.FilterOutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.io.OutputStream"><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.FileOutputStream"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.FileOutputStream"/></lhs><lhs name\="java.io.BufferedOutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="com.jstudio.jxls.inform.InformReportBean"><rhs name\="com.jstudio.jxls.inform.InformReportBean"/></lhs><lhs name\="com.jstudio.jxls.inform.InformReportRecord"><rhs name\="com.jstudio.jxls.inform.InformReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.AbstractReportRecord"><rhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"/><rhs name\="com.workssys.share.system.report.export.FwReportRecord"/><rhs name\="com.workssys.share.system.report.export.InformReportRecord"/><rhs name\="com.workssys.share.system.report.export.ProvisionReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.ByDeviceTypeReportRecord"><rhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"/><rhs name\="com.workssys.share.system.report.export.FwReportRecord"/><rhs name\="com.workssys.share.system.report.export.InformReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"><rhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.FwReportRecord"><rhs name\="com.workssys.share.system.report.export.FwReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.InformReportRecord"><rhs name\="com.workssys.share.system.report.export.InformReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.ProvisionReportRecord"><rhs name\="com.workssys.share.system.report.export.ProvisionReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.ReportBean"><rhs name\="com.workssys.share.system.report.export.ReportBean"/></lhs><lhs name\="org.springframework.core.io.AbstractResource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="org.springframework.core.io.Resource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="org.springframework.core.io.InputStreamSource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="org.springframework.core.io.ClassPathResource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="com.workssys.share.system.report.export.xls.XLSReportExporter"><rhs name\="com.workssys.share.system.report.export.xls.XLSReportExporter"/></lhs></history>
+/instance/org.eclipse.jdt.ui/content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.workssys.share.device.inform.job.Job"><rhs name\="com.workssys.share.device.inform.job.TWMUpdateParamJob"/><rhs name\="com.workssys.share.device.inform.job.AutoGroupingJob"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.HashSet"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.HashSet"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="com.jstudio.jxls.ReportBean"><rhs name\="com.jstudio.jxls.ReportBean"/><rhs name\="com.jstudio.jxls.inform.InformReportBean"/></lhs><lhs name\="com.jstudio.jxls.BaseReportRecord"><rhs name\="com.jstudio.jxls.FwReportRecord"/><rhs name\="com.jstudio.jxls.inform.InformReportRecord"/></lhs><lhs name\="net.sf.jxls.transformer.XLSTransformer"><rhs name\="net.sf.jxls.transformer.XLSTransformer"/></lhs><lhs name\="java.io.FilterInputStream"><rhs name\="java.io.BufferedInputStream"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.FileOutputStream"/><rhs name\="java.io.BufferedReader"/><rhs name\="java.io.BufferedWriter"/><rhs name\="java.io.FileWriter"/><rhs name\="com.workssys.share.util.UnicodeInputStreamReader"/><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.BufferedInputStream"><rhs name\="java.io.BufferedInputStream"/></lhs><lhs name\="java.io.FilterOutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.io.OutputStream"><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.FileOutputStream"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.FileOutputStream"/><rhs name\="java.io.BufferedWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.io.BufferedOutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.util.Map"><rhs name\="edu.emory.mathcs.backport.java.util.TreeMap"/><rhs name\="java.util.TreeMap"/><rhs name\="java.util.HashMap"/></lhs><lhs name\="com.jstudio.jxls.inform.InformReportBean"><rhs name\="com.jstudio.jxls.inform.InformReportBean"/></lhs><lhs name\="com.jstudio.jxls.inform.InformReportRecord"><rhs name\="com.jstudio.jxls.inform.InformReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.AbstractReportRecord"><rhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"/><rhs name\="com.workssys.share.system.report.export.FwReportRecord"/><rhs name\="com.workssys.share.system.report.export.InformReportRecord"/><rhs name\="com.workssys.share.system.report.export.ProvisionReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.ByDeviceTypeReportRecord"><rhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"/><rhs name\="com.workssys.share.system.report.export.FwReportRecord"/><rhs name\="com.workssys.share.system.report.export.InformReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"><rhs name\="com.workssys.share.system.report.export.DeploymentReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.FwReportRecord"><rhs name\="com.workssys.share.system.report.export.FwReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.InformReportRecord"><rhs name\="com.workssys.share.system.report.export.InformReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.ProvisionReportRecord"><rhs name\="com.workssys.share.system.report.export.ProvisionReportRecord"/></lhs><lhs name\="com.workssys.share.system.report.export.ReportBean"><rhs name\="com.workssys.share.system.report.export.ReportBean"/></lhs><lhs name\="org.springframework.core.io.AbstractResource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="org.springframework.core.io.Resource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="org.springframework.core.io.InputStreamSource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="org.springframework.core.io.ClassPathResource"><rhs name\="org.springframework.core.io.ClassPathResource"/></lhs><lhs name\="com.workssys.share.system.report.export.xls.XLSReportExporter"><rhs name\="com.workssys.share.system.report.export.xls.XLSReportExporter"/></lhs><lhs name\="com.workssys.share.pojo.FactoryResetRequest"><rhs name\="com.workssys.share.pojo.FactoryResetRequest"/></lhs><lhs name\="java.util.Set"><rhs name\="java.util.HashSet"/></lhs><lhs name\="com.workssys.share.order.adapter.twm.AbstractOrderPreprocessor"><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.AddModifyPreprocessor"/><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.TestAddModifyPreprocessor$MockAddPreprocessor"/><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.TestAddModifyPreprocessor$MockModifyPreprocessor"/></lhs><lhs name\="com.workssys.share.order.adapter.twm.IOrderPreprocessor"><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.AddModifyPreprocessor"/><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.TestAddModifyPreprocessor$MockAddPreprocessor"/><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.TestAddModifyPreprocessor$MockModifyPreprocessor"/></lhs><lhs name\="com.workssys.share.order.adapter.twm.preprocessors.AddModifyPreprocessor"><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.AddModifyPreprocessor"/></lhs><lhs name\="com.workssys.share.order.adapter.twm.preprocessors.AddPreprocessor"><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.TestAddModifyPreprocessor$MockAddPreprocessor"/></lhs><lhs name\="com.workssys.share.order.adapter.twm.preprocessors.ModifyPreprocessor"><rhs name\="com.workssys.share.order.adapter.twm.preprocessors.TestAddModifyPreprocessor$MockModifyPreprocessor"/></lhs><lhs name\="com.workssys.share.pojo.Device"><rhs name\="com.workssys.share.pojo.Device"/></lhs><lhs name\="com.workssys.utils.paging.FilterRule"><rhs name\="com.workssys.utils.paging.FilterRule"/></lhs><lhs name\="com.workssys.share.servicecode.RedeployServiceCodeHandler$RedeployServiceInfo"><rhs name\="com.workssys.share.servicecode.RedeployServiceCodeHandler$RedeployServiceInfo"/></lhs><lhs name\="com.workssys.share.servicecode.IServiceProfileHandler"><rhs name\="com.workssys.share.servicecode.RedeployServiceCodeHandler"/></lhs><lhs name\="com.workssys.share.servicecode.RedeployServiceCodeHandler"><rhs name\="com.workssys.share.servicecode.RedeployServiceCodeHandler"/></lhs><lhs name\="com.workssys.share.pojo.ServiceCode"><rhs name\="com.workssys.share.pojo.ServiceCode"/></lhs><lhs name\="com.workssys.share.pojo.SubServiceCode"><rhs name\="com.workssys.share.pojo.SubServiceCode"/></lhs><lhs name\="com.workssys.share.pojo.ServiceProfile"><rhs name\="com.workssys.share.pojo.ScriptServiceProfile"/></lhs><lhs name\="com.workssys.share.pojo.NorthBoundModel"><rhs name\="com.workssys.share.pojo.NorthBoundParameter"/><rhs name\="com.workssys.share.pojo.NorthBoundObject"/></lhs><lhs name\="com.workssys.share.pojo.NorthBoundObject"><rhs name\="com.workssys.share.pojo.NorthBoundObject"/></lhs><lhs name\="java.lang.ClassLoader"><rhs name\="com.jstudio.learnjvm.classloader.MyClassLoader"/></lhs><lhs name\="com.jstudio.learnjvm.classloader.FooBar"><rhs name\="com.jstudio.learnjvm.classloader.FooBar"/></lhs><lhs name\="java.lang.Thread"><rhs name\="com.jstudio.learnjvm.classloader.AppThread"/></lhs><lhs name\="java.lang.Runnable"><rhs name\="com.jstudio.learnjvm.classloader.AppThread"/></lhs><lhs name\="com.jstudio.learnjvm.classloader.AppThread"><rhs name\="com.jstudio.learnjvm.classloader.AppThread"/></lhs><lhs name\="java.util.concurrent.CountDownLatch"><rhs name\="java.util.concurrent.CountDownLatch"/></lhs><lhs name\="com.jstudio.learnjvm.classloader.MyClassLoader"><rhs name\="com.jstudio.learnjvm.classloader.MyClassLoader"/></lhs><lhs name\="com.workssys.share.pojo.Configuration"><rhs name\="com.workssys.share.pojo.Configuration"/></lhs><lhs name\="com.workssys.share.device.config.ITRObjectMarshaler"><rhs name\="com.workssys.share.device.config.TRObjectMarshaler"/></lhs><lhs name\="java.io.Reader"><rhs name\="java.io.BufferedReader"/><rhs name\="com.workssys.share.util.UnicodeInputStreamReader"/></lhs><lhs name\="java.lang.Readable"><rhs name\="java.io.BufferedReader"/><rhs name\="com.workssys.share.util.UnicodeInputStreamReader"/></lhs><lhs name\="java.io.BufferedReader"><rhs name\="java.io.BufferedReader"/></lhs><lhs name\="com.workssys.share.pojo.VoipLine"><rhs name\="com.workssys.share.pojo.VoipLine"/></lhs><lhs name\="com.workssys.share.pojo.NorthBoundParameter"><rhs name\="com.workssys.share.pojo.NorthBoundParameter"/></lhs><lhs name\="java.io.Writer"><rhs name\="java.io.BufferedWriter"/><rhs name\="java.io.FileWriter"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.io.BufferedWriter"/><rhs name\="java.io.FileWriter"/><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.io.BufferedWriter"><rhs name\="java.io.BufferedWriter"/></lhs><lhs name\="java.io.FileInputStream"><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="com.workssys.share.pojo.DynamicDeviceGroup"><rhs name\="com.workssys.share.pojo.DynamicDeviceGroup"/></lhs><lhs name\="com.workssys.share.pojo.User"><rhs name\="com.workssys.share.pojo.User"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="com.workssys.utils.paging.Filter"/></lhs><lhs name\="com.workssys.utils.paging.Filter"><rhs name\="com.workssys.utils.paging.Filter"/></lhs><lhs name\="com.workssys.utils.paging.Pager"><rhs name\="com.workssys.utils.paging.Pager"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="com.workssys.share.pojo.ServiceInfo"><rhs name\="com.workssys.share.pojo.ServiceInfo"/></lhs><lhs name\="com.workssys.share.pojo.SubServiceInfo"><rhs name\="com.workssys.share.pojo.SubServiceInfo"/></lhs></history>
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.insert_space_between_empty_parens_in_annotation_type_member_declaration=do not insert
 @org.eclipse.wst.ws.service.policy=1.0.103.v200905151848
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS2.StaticField_color=0,128,0
