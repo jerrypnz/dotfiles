@@ -46,10 +46,6 @@
 "       Makes it easy to get an overview of buffers:
 "           info -> :e ~/.vim_runtime/plugin/minibufexpl.vim
 "
-"     > bufexplorer - http://www.vim.org/scripts/script.php?script_id=42
-"       Makes it easy to switch between buffers:
-"           info -> :help bufExplorer
-"
 "     > yankring.vim - http://www.vim.org/scripts/script.php?script_id=1234
 "       Emacs's killring, useful when using the clipboard:
 "           info -> :help yankring
@@ -547,7 +543,7 @@ endtry
 """"""""""""""""""""""""""""""
 " => Vim grep
 """"""""""""""""""""""""""""""
-let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
+let Grep_Skip_Dirs = 'RCS CVS SCCS .svn .git generated'
 set grepprg=/bin/grep\ -nH
 
 
