@@ -1,0 +1,6 @@
+[submodule "bundle"]
+	path = bundle
+	url = https://sukima@github.com/sukima/xmledit.git
+[submodule "vim/bundle/xmledit-git"]
+	path = vim/bundle/xmledit-git
+	url = https://sukima@github.com/sukima/xmledit.git
