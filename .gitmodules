@@ -4,3 +4,6 @@
 [submodule "vim/bundle/xmledit-git"]
 	path = vim/bundle/xmledit-git
 	url = https://sukima@github.com/sukima/xmledit.git
+[submodule "vim/bundle/supertab-git"]
+	path = vim/bundle/supertab-git
+	url = http://github.com/ervandew/supertab.git
