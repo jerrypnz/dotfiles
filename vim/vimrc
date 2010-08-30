@@ -158,16 +158,11 @@ if has("gui_running")
   set guifontwide=iYahei\ 10
   set guioptions-=T
   set guioptions-=m
-  set t_Co=256
-  set background=dark
-  colorscheme molokai
-
-else
-  set background=dark
-  colorscheme peaksea
-
 endif
 
+set t_Co=256
+set background=dark
+colorscheme wombat256mod
 
 set encoding=utf8
 try
