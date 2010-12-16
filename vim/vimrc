@@ -529,11 +529,11 @@ endfunction
 """"""""""""""""""""""""""""""
 " => Fuzzy finder
 """"""""""""""""""""""""""""""
-try
-    call fuf#defineLaunchCommand('FufCWD', 'file', 'fnamemodify(getcwd(), ''%:p:h'')')
-    map <leader>t :FufCWD **/<CR>
-catch
-endtry
+" try
+"     call fuf#defineLaunchCommand('FufCWD', 'file', 'fnamemodify(getcwd(), ''%:p:h'')')
+"     map <leader>t :FufCWD **/<CR>
+" catch
+" endtry
 
 
 """"""""""""""""""""""""""""""
