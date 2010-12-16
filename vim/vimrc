@@ -591,6 +591,9 @@ noremap <C-i> <C-]>
 noremap <C-c> "+
 vnoremap <C-c> "+y
 noremap <C-a> ggVG
+"eclipse style key mapping for fuzzyfinder
+noremap <C-T> :FufTag<cr>
+noremap <C-R> :FufFile<cr>
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
