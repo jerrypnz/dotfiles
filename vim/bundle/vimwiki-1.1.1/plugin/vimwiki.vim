@@ -81,11 +81,8 @@ function! s:setup_buffer_enter() "{{{
     let b:vimwiki_idx = g:vimwiki_current_idx
   endif
 
-  if &filetype != 'vimwiki'
-    setlocal ft=vimwiki
-  else
-    setlocal syntax=vimwiki
-  endif
+  " Update existed/non-existed links highlighting.
+  call vimwiki#highlight_links()
 
   " Settings foldmethod, foldexpr and foldtext are local to window. Thus in a
   " new tab with the same buffer folding is reset to vim defaults. So we
@@ -181,7 +178,6 @@ let s:vimwiki_defaults.index = 'index'
 let s:vimwiki_defaults.ext = '.wiki'
 let s:vimwiki_defaults.maxhi = 1
 let s:vimwiki_defaults.syntax = 'default'
-let s:vimwiki_defaults.gohome = 'split'
 let s:vimwiki_defaults.html_header = ''
 let s:vimwiki_defaults.html_footer = ''
 let s:vimwiki_defaults.nested_syntaxes = {}
@@ -303,12 +299,13 @@ augroup vimwiki
   for ext in keys(extensions)
     exe 'autocmd BufEnter *'.ext.' call s:setup_buffer_enter()'
     exe 'autocmd BufLeave,BufHidden *'.ext.' call s:setup_buffer_leave()'
+    exe 'autocmd BufNewFile,BufRead, *'.ext.' setlocal filetype=vimwiki'
 
     " ColorScheme could have or could have not a
     " VimwikiHeader1..VimwikiHeader6 highlight groups. We need to refresh
     " syntax after colorscheme change.
     exe 'autocmd ColorScheme *'.ext.' call vimwiki#setup_colors()'.
-          \ ' | set syntax=vimwiki'
+          \ ' | call vimwiki#highlight_links()'
 
     " Format tables when exit from insert mode. Do not use textwidth to
     " autowrap tables.
@@ -321,11 +318,11 @@ augroup END
 "}}}
 
 " COMMANDS {{{
-command! VimwikiUISelect call vimwiki#WikiUISelect()
-command! -count VimwikiGoHome
-      \ call vimwiki#WikiGoHome(v:count1)
-command! -count VimwikiTabGoHome tabedit <bar>
-      \ call vimwiki#WikiGoHome(v:count1)
+command! VimwikiUISelect call vimwiki#ui_select()
+command! -count VimwikiIndex
+      \ call vimwiki#goto_index(v:count1)
+command! -count VimwikiTabIndex tabedit <bar>
+      \ call vimwiki#goto_index(v:count1)
 
 command! -count VimwikiMakeDiaryNote
       \ call vimwiki_diary#make_note(v:count1)
@@ -334,15 +331,15 @@ command! -count VimwikiTabMakeDiaryNote tabedit <bar>
 "}}}
 
 " MAPPINGS {{{
-if !hasmapto('<Plug>VimwikiGoHome')
-  map <silent><unique> <Leader>ww <Plug>VimwikiGoHome
+if !hasmapto('<Plug>VimwikiIndex')
+  map <silent><unique> <Leader>ww <Plug>VimwikiIndex
 endif
-noremap <unique><script> <Plug>VimwikiGoHome :VimwikiGoHome<CR>
+noremap <unique><script> <Plug>VimwikiIndex :VimwikiIndex<CR>
 
-if !hasmapto('<Plug>VimwikiTabGoHome')
-  map <silent><unique> <Leader>wt <Plug>VimwikiTabGoHome
+if !hasmapto('<Plug>VimwikiTabIndex')
+  map <silent><unique> <Leader>wt <Plug>VimwikiTabIndex
 endif
-noremap <unique><script> <Plug>VimwikiTabGoHome :VimwikiTabGoHome<CR>
+noremap <unique><script> <Plug>VimwikiTabIndex :VimwikiTabIndex<CR>
 
 if !hasmapto('<Plug>VimwikiUISelect')
   map <silent><unique> <Leader>ws <Plug>VimwikiUISelect
@@ -367,9 +364,9 @@ function! s:build_menu(topmenu)
   let idx = 0
   while idx < len(g:vimwiki_list)
     let norm_path = fnamemodify(VimwikiGet('path', idx), ':h:t')
-    let norm_path = escape(norm_path, '\ ')
+    let norm_path = escape(norm_path, '\ \.')
     execute 'menu '.a:topmenu.'.Open\ index.'.norm_path.
-          \ ' :call vimwiki#WikiGoHome('.(idx + 1).')<CR>'
+          \ ' :call vimwiki#goto_index('.(idx + 1).')<CR>'
     execute 'menu '.a:topmenu.'.Open/Create\ diary\ note.'.norm_path.
           \ ' :call vimwiki_diary#make_note('.(idx + 1).')<CR>'
     let idx += 1

@@ -10,34 +10,8 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-"" use max highlighting - could be quite slow if there are too many wikifiles
-if VimwikiGet('maxhi')
-  " Every WikiWord is nonexistent
-  if g:vimwiki_camel_case
-    execute 'syntax match VimwikiNoExistsLink /'.g:vimwiki_rxWikiWord.'/'
-    execute 'syntax match VimwikiNoExistsLinkT /'.g:vimwiki_rxWikiWord.'/ contained'
-  endif
-  execute 'syntax match VimwikiNoExistsLink /'.g:vimwiki_rxWikiLink1.'/ contains=VimwikiNoLinkChar'
-  execute 'syntax match VimwikiNoExistsLink /'.g:vimwiki_rxWikiLink2.'/ contains=VimwikiNoLinkChar'
-
-  execute 'syntax match VimwikiNoExistsLinkT /'.g:vimwiki_rxWikiLink1.'/ contained'
-  execute 'syntax match VimwikiNoExistsLinkT /'.g:vimwiki_rxWikiLink2.'/ contained'
-
-  " till we find them in vimwiki's path
-  call vimwiki#WikiHighlightLinks()
-else
-  " A WikiWord (unqualifiedWikiName)
-  execute 'syntax match VimwikiLink /\<'.g:vimwiki_rxWikiWord.'\>/'
-  " A [[bracketed wiki word]]
-  execute 'syntax match VimwikiLink /'.g:vimwiki_rxWikiLink1.'/ contains=VimwikiLinkChar'
-  execute 'syntax match VimwikiLink /'.g:vimwiki_rxWikiLink2.'/ contains=VimwikiLinkChar'
-
-  execute 'syntax match VimwikiLinkT /\<'.g:vimwiki_rxWikiWord.'\>/ contained'
-  execute 'syntax match VimwikiLinkT /'.g:vimwiki_rxWikiLink1.'/ contained'
-  execute 'syntax match VimwikiLinkT /'.g:vimwiki_rxWikiLink2.'/ contained'
-endif
-
-execute 'syntax match VimwikiLink `'.g:vimwiki_rxWeblink.'`'
+" Links highlighting is controlled by vimwiki#highlight_links() function.
+" It is called from setup_buffer_enter() function in the BufEnter autocommand.
 
 " Load concrete Wiki syntax
 execute 'runtime! syntax/vimwiki_'.VimwikiGet('syntax').'.vim'
