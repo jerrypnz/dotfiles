@@ -595,6 +595,8 @@ noremap <C-a> ggVG
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
 let g:vimwiki_camel_case = 0
+let g:vimwiki_html_header_numbering = 2
+let g:vimwiki_html_header_numbering_sym = '.'
 
 "Zencoding configurations
 let g:user_zen_settings = {'xml' : {'extends': 'html',}, 'jsp' : {'extends': 'html',}, 'php' : {'extends': 'html', 'filters': 'c', }, }
