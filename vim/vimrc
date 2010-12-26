@@ -574,6 +574,10 @@ au FileType python set makeprg=python\ %
 map <F5> :make<CR>
 let g:pydiction_location = "~/.vim"
 
+"Key mapping for compiling and running C programs
+au FileType c map <F6> :!gcc -Wall % -o %<<CR>
+au FileType c map <F7> :!./%<<CR>
+
 if has("gui_running")
     "Maximize the window for GUI
     set lines=65 columns=160
@@ -591,9 +595,10 @@ noremap <C-i> <C-]>
 noremap <C-c> "+
 vnoremap <C-c> "+y
 noremap <C-a> ggVG
+noremap <C-x> <C-w>c
 "eclipse style key mapping for fuzzyfinder
-noremap <C-T> :FufTag<cr>
-noremap <C-R> :FufFile<cr>
+noremap <M-t> :FufTag<cr>
+noremap <M-r> :FufFile<cr>
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
@@ -603,3 +608,4 @@ let g:vimwiki_html_header_numbering_sym = '.'
 
 "Zencoding configurations
 let g:user_zen_settings = {'xml' : {'extends': 'html',}, 'jsp' : {'extends': 'html',}, 'php' : {'extends': 'html', 'filters': 'c', }, }
+
