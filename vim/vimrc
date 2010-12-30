@@ -47,10 +47,6 @@
 "       Makes it easy to get an overview of buffers:
 "           info -> :e ~/.vim_runtime/plugin/minibufexpl.vim
 "
-"     > bufexplorer - http://www.vim.org/scripts/script.php?script_id=42
-"       Makes it easy to switch between buffers:
-"           info -> :help bufExplorer
-"
 "     > yankring.vim - http://www.vim.org/scripts/script.php?script_id=1234
 "       Emacs's killring, useful when using the clipboard:
 "           info -> :help yankring
@@ -274,13 +270,6 @@ cnoremap <C-K>		<C-U>
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
-" Useful on some European keyboards
-map ½ $
-imap ½ $
-vmap ½ $
-cmap ½ $
-
-
 func! Cwd()
   let cwd = getcwd()
   return "e " . cwd 
@@ -311,9 +300,6 @@ endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Map space to / (search) and c-space to ? (backgwards search)
-" map <space> /
-" map <c-space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move btw. windows
@@ -405,14 +391,11 @@ vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
 " Map auto complete of (, ", ', [
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
-inoremap $t <><esc>i
-
+inoremap ( ()<esc>i
+inoremap [ []<esc>i
+inoremap { {<esc>o}<esc>O
+inoremap ' ''<esc>i
+inoremap " ""<esc>i
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Abbrevs
@@ -460,14 +443,6 @@ map <leader>p :cp<cr>
 
 
 """"""""""""""""""""""""""""""
-" => bufExplorer plugin
-""""""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-map <leader>o :BufExplorer<cr>
-
-
-""""""""""""""""""""""""""""""
 " => Minibuffer plugin
 """"""""""""""""""""""""""""""
 let g:miniBufExplModSelTarget = 1
@@ -482,7 +457,7 @@ let g:bufExplorerSortBy = "name"
 
 autocmd BufRead,BufNew :call UMiniBufExplorer
 
-map <leader>u :TMiniBufExplorer<cr>
+map <F4> :TMiniBufExplorer<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -513,10 +488,6 @@ au FileType python syn keyword pythonDecorator True None False self
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.mako set ft=mako
 
-au FileType python inoremap <buffer> $r return 
-au FileType python inoremap <buffer> $i import 
-au FileType python inoremap <buffer> $p print 
-au FileType python inoremap <buffer> $f #--- PH ----------------------------------------------<esc>FP2xi
 au FileType python map <buffer> <leader>1 /class 
 au FileType python map <buffer> <leader>2 /def 
 au FileType python map <buffer> <leader>C ?class 
@@ -526,36 +497,8 @@ au FileType python map <buffer> <leader>D ?def
 """"""""""""""""""""""""""""""
 " => JavaScript section
 """""""""""""""""""""""""""""""
-au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
 au FileType javascript setl nocindent
-
-au FileType javascript imap <c-t> AJS.log();<esc>hi
-au FileType javascript imap <c-a> alert();<esc>hi
-
-au FileType javascript inoremap <buffer> $r return 
-au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
-
-function! JavaScriptFold() 
-    setl foldmethod=syntax
-    setl foldlevelstart=1
-    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-
-    function! FoldText()
-    return substitute(getline(v:foldstart), '{.*', '{...}', '')
-    endfunction
-    setl foldtext=FoldText()
-endfunction
-
-
-""""""""""""""""""""""""""""""
-" => Fuzzy finder
-""""""""""""""""""""""""""""""
-" try
-"     call fuf#defineLaunchCommand('FufCWD', 'file', 'fnamemodify(getcwd(), ''%:p:h'')')
-"     map <leader>t :FufCWD **/<CR>
-" catch
-" endtry
 
 
 """"""""""""""""""""""""""""""
@@ -582,20 +525,12 @@ map <leader>pp :setlocal paste!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Jerry's configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Tag list config
-"let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-"let Tlist_WinWidth = 35
-"map <F4> :TlistToggle<cr>
-"map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
-"NERD tree config
-"let NERDTreeWinPos = "right"
-"map <F3> :NERDTreeToggle<cr>
+" Shortcut for generating ctags
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 "Python related config
 au FileType python set makeprg=python\ %
 map <F5> :make<CR>
-let g:pydiction_location = "~/.vim"
 
 "Key mapping for compiling and running C programs
 au FileType c map <F6> :!gcc -Wall % -o %<<CR>
@@ -619,9 +554,20 @@ noremap <C-c> "+
 vnoremap <C-c> "+y
 noremap <C-a> ggVG
 noremap <C-x> <C-w>c
-"eclipse style key mapping for fuzzyfinder
-noremap <M-t> :FufTag<cr>
-noremap <M-r> :FufFile<cr>
+
+" Fuzzyfinder Key bindings
+let g:fuf_modesDisable = []
+let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp|\.class$'
+
+nnoremap <silent> sf     :FufCoverageFile!<CR>
+nnoremap <silent> sF     :FufFile!<CR>
+nnoremap <silent> st     :FufTag!<CR>
+nnoremap <silent> sT     :FufTagWithCursorWord!<CR>
+nnoremap <silent> sj     :FufBuffer!<CR>
+nnoremap <silent> so     :FufBufferTag!<CR>
+nnoremap <silent> si     :FufBookmarkDir<CR>
+nnoremap <silent> sI     :FufBookmarkDirAdd<CR>
+nnoremap <silent> sq     :FufQuickfix<CR>
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
