@@ -2,7 +2,7 @@
 " Maintainer: amix the lucky stiff
 "             http://amix.dk - amix@amix.dk
 "
-" Version: 3.3 - 21/01/10 01:05:46
+" Version: 3.6 - 25/08/10 14:40:30
 "
 " Blog_post: 
 "       http://amix.dk/blog/post/19486#The-ultimate-vim-configuration-vimrc
@@ -11,7 +11,7 @@
 " Raw_version: 
 "       http://amix.dk/vim/vimrc.txt
 "
-" How_to_Install:
+" How_to_Install_on_Unix:
 "    $ mkdir ~/.vim_runtime
 "    $ svn co svn://orangoo.com/vim ~/.vim_runtime
 "    $ cat ~/.vim_runtime/install.sh
@@ -41,10 +41,15 @@
 "    -> Python section
 "    -> JavaScript section
 "
+"
 " Plugins_Included:
 "     > minibufexpl.vim - http://www.vim.org/scripts/script.php?script_id=159
 "       Makes it easy to get an overview of buffers:
 "           info -> :e ~/.vim_runtime/plugin/minibufexpl.vim
+"
+"     > bufexplorer - http://www.vim.org/scripts/script.php?script_id=42
+"       Makes it easy to switch between buffers:
+"           info -> :help bufExplorer
 "
 "     > yankring.vim - http://www.vim.org/scripts/script.php?script_id=1234
 "       Emacs's killring, useful when using the clipboard:
@@ -63,6 +68,9 @@
 "           info -> :help fuzzyfinder@en
 "
 "  Revisions:
+"     > 3.6: Added lots of stuff (colors, Command-T, Vim 7.3 persistent undo etc.)
+"     > 3.5: Paste mode is now shown in status line  if you are in paste mode
+"     > 3.4: Added mru.vim
 "     > 3.3: Added syntax highlighting for Mako mako.vim 
 "     > 3.2: Turned on python_highlight_all for better syntax
 "            highlighting for Python
@@ -106,6 +114,7 @@ map <leader>e :e! ~/.vimrc<cr>
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
+map <leader>pp :setlocal paste!<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -127,10 +136,12 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 set ignorecase "Ignore case when searching
+set smartcase
 
 set hlsearch "Highlight search things
 
 set incsearch "Make search act like search in modern browsers
+set nolazyredraw "Don't redraw while executing macros 
 
 set magic "Set magic on, for regular expressions
 
@@ -322,7 +333,7 @@ map <Right> :bn<cr>
 map <Left> :bp<cr>
 
 " Tab configuration
-map <leader>tn :tabnew %<cr>
+map <leader>tn :tabnew<cr>
 map <leader>te :tabedit 
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
@@ -366,12 +377,20 @@ endtry
 set laststatus=2
 
 " Format the statusline
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
 
 
 function! CurDir()
     let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
     return curdir
+endfunction
+
+function! HasPaste()
+    if &paste
+        return 'PASTE MODE  '
+    else
+        return ''
+    endif
 endfunction
 
 
@@ -392,6 +411,7 @@ inoremap $3 {}<esc>i
 inoremap $4 {<esc>o}<esc>O
 inoremap $q ''<esc>i
 inoremap $e ""<esc>i
+inoremap $t <><esc>i
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -427,6 +447,8 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 
+set guitablabel=%t
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
@@ -442,6 +464,7 @@ map <leader>p :cp<cr>
 """"""""""""""""""""""""""""""
 let g:bufExplorerDefaultHelp=0
 let g:bufExplorerShowRelativePath=1
+map <leader>o :BufExplorer<cr>
 
 
 """"""""""""""""""""""""""""""
@@ -452,14 +475,14 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-" let g:miniBufExplVSplit = 25
-" let g:miniBufExplSplitBelow=1
+let g:miniBufExplVSplit = 25
+let g:miniBufExplSplitBelow=1
 
 let g:bufExplorerSortBy = "name"
 
 autocmd BufRead,BufNew :call UMiniBufExplorer
 
-map <leader>u :TMiniBufExplorer<cr>:TMiniBufExplorer<cr>
+map <leader>u :TMiniBufExplorer<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -484,7 +507,6 @@ map <leader>s? z=
 """"""""""""""""""""""""""""""
 " => Python section
 """"""""""""""""""""""""""""""
-au FileType python set nocindent
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
 
@@ -552,6 +574,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 "Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
 
+map <leader>pp :setlocal paste!<cr>
 "Generate the help tags
 "helptags ~/.vim/doc
 
