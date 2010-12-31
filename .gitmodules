@@ -13,3 +13,6 @@
 [submodule "vim/bundle/command-t-git"]
 	path = vim/bundle/command-t-git
 	url = git://git.wincent.com/command-t.git
+[submodule "vim/bundle/vcscommands-git"]
+	path = vim/bundle/vcscommands-git
+	url = git://repo.or.cz/vcscommand
