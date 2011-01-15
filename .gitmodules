@@ -16,3 +16,6 @@
 [submodule "vim/bundle/vcscommands-git"]
 	path = vim/bundle/vcscommands-git
 	url = git://repo.or.cz/vcscommand
+[submodule "vim/bundle/git-vim-git"]
+	path = vim/bundle/git-vim-git
+	url = git://github.com/motemen/git-vim.git
