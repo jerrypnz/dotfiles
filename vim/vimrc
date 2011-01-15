@@ -161,10 +161,14 @@ set shell=/bin/bash
 set nu
 
 if has("gui_running")
-  set guifont=Monaco\ 10
-  set guifontwide=iYahei\ 10
+  set guifont=Monaco\ 9
+  set guifontwide=iYahei\ 9
   set guioptions-=T
   set guioptions-=m
+  set guioptions-=l
+  set guioptions-=L
+  set guioptions-=r
+  set guioptions-=R
 endif
 
 set t_Co=256
@@ -202,7 +206,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indet
-set wrap "Wrap lines
+set nowrap "Do not wrap lines
 
 map <leader>t2 :setlocal shiftwidth=2<cr>
 map <leader>t4 :setlocal shiftwidth=4<cr>
@@ -390,13 +394,6 @@ vnoremap $$ <esc>`>a"<esc>`<i"<esc>
 vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
-" Map auto complete of (, ", ', [
-inoremap ( ()<esc>i
-inoremap [ []<esc>i
-inoremap { {<esc>o}<esc>O
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Abbrevs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -554,10 +551,12 @@ noremap <C-c> "+
 vnoremap <C-c> "+y
 noremap <C-a> ggVG
 noremap <C-x> <C-w>c
+noremap <C-q> :Bclose<cr>
 
 " Fuzzyfinder Key bindings
 let g:fuf_modesDisable = []
-let g:fuf_file_exclude = '\v\~$|\.o$|\.exe$|\.bak$|\.swp|\.class$'
+let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+let g:fuf_enumeratingLimit = 30
 
 nnoremap <silent> sf     :FufCoverageFile!<CR>
 nnoremap <silent> sF     :FufFile!<CR>
