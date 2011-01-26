@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# ibus daemon
+ibus-daemon -x -d -r &
+
+# composite manager
+xcompmgr -c -t-5 -l-5 -r4.2 -o.55 &
+
+# Start a terminal
+urxvt -title Terminal &
+
+# Start the window manager
+exec awesome
