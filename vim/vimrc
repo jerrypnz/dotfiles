@@ -173,7 +173,7 @@ endif
 
 set t_Co=256
 set background=dark
-colorscheme wombat256mod
+colorscheme zenburn
 
 set encoding=utf8
 try
