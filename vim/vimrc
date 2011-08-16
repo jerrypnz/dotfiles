@@ -371,7 +371,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ 
 
 
 function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+    let curdir = substitute(getcwd(), '/home/jerry/', "~/", "g")
     return curdir
 endfunction
 
@@ -560,6 +560,9 @@ noremap <C-q> :Bclose<cr>
 let g:fuf_modesDisable = []
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 let g:fuf_enumeratingLimit = 30
+
+" Yank ring history file name
+let g:yankring_history_file = '.yankring_history'
 
 nnoremap <silent> sf     :FufCoverageFile!<CR>
 nnoremap <silent> sF     :FufFile!<CR>
