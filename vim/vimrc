@@ -161,7 +161,7 @@ set shell=/bin/bash
 set nu
 
 if has("gui_running")
-  set guifont=Monaco\ 9
+  set guifont=Droid\ Sans\ Mono\ 9
   set guifontwide=iYahei\ 9
   set guioptions-=T
   set guioptions-=m
