@@ -161,19 +161,22 @@ set shell=/bin/bash
 set nu
 
 if has("gui_running")
-  set guifont=Droid\ Sans\ Mono\ 9
-  set guifontwide=iYahei\ 9
-  set guioptions-=T
-  set guioptions-=m
-  set guioptions-=l
-  set guioptions-=L
-  set guioptions-=r
-  set guioptions-=R
+    set guifont=Monaco\ 10
+    set guifontwide=iYahei\ 9
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=l
+    set guioptions-=L
+    set guioptions-=r
+    set guioptions-=R
+    set background=dark
+    colorscheme solarized
+else
+    set t_Co=256
+    set background=dark
+    colorscheme zenburn
 endif
 
-set t_Co=256
-set background=dark
-colorscheme zenburn
 
 set encoding=utf8
 try
