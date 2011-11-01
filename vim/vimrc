@@ -541,7 +541,7 @@ au FileType c map <F7> :!./%<<CR>
 
 if has("gui_running")
     "Maximize the window for GUI
-    set lines=65 columns=160
+    set lines=50 columns=145
 
     " Use Alt-l, Alt-h in the GUI mode to move between buffers
     map <M-l> :bn<cr>
