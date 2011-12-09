@@ -586,3 +586,11 @@ let g:vimwiki_html_header_numbering_sym = '.'
 "Zencoding configurations
 let g:user_zen_settings = {'xml' : {'extends': 'html',}, 'jsp' : {'extends': 'html',}, 'php' : {'extends': 'html', 'filters': 'c', }, }
 
+"Persistent undo settings
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+"Gundo
+nnoremap <F6> :GundoToggle<CR>
