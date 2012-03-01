@@ -169,13 +169,10 @@ if has("gui_running")
     set guioptions-=L
     set guioptions-=r
     set guioptions-=R
-    set background=dark
-    colorscheme solarized
-else
-    set t_Co=256
-    set background=dark
-    colorscheme zenburn
 endif
+
+set background=dark
+colorscheme solarized
 
 
 set encoding=utf8
@@ -593,4 +590,4 @@ set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 "Gundo
-nnoremap <F6> :GundoToggle<CR>
+nnoremap <F3> :GundoToggle<CR>
