@@ -172,7 +172,9 @@ if has("gui_running")
     set background=dark
     colorscheme solarized
 else
-    set t_Co=256
+    set t_Co=16
+    let g:solarized_termcolors=16
+    let g:solarized_termtrans=1
     set background=dark
     colorscheme solarized
 endif
@@ -591,6 +593,9 @@ set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+"For tmux
+map <Esc>[B <Down>
 
 "Gundo
 nnoremap <F3> :GundoToggle<CR>
