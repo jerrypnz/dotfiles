@@ -401,11 +401,11 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 "Remap VIM 0
 map 0 ^
 
-"Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <C-J> mz:m+<cr>`z
-nmap <C-K> mz:m-2<cr>`z
-vmap <C-J> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <C-K> :m'<-2<cr>`>my`<mzgv`yo`z
+"Move a line of text using Up and Down
+noremap <Down> mz:m+<cr>`z
+noremap <Up> mz:m-2<cr>`z
+vnoremap <Down> :m'>+<cr>`<my`>mzgv`yo`z
+vnoremap <Up> :m'<-2<cr>`>my`<mzgv`yo`z
 
 if MySys() == "mac"
   nmap <D-j> <M-j>
@@ -442,8 +442,8 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplVSplit = 25
-let g:miniBufExplSplitBelow=0
+let g:miniBufExplVSplit = 25
+let g:miniBufExplSplitBelow=1
 
 let g:bufExplorerSortBy = "name"
 
@@ -538,8 +538,8 @@ if has("gui_running")
     " Use Alt-l, Alt-h in the GUI mode to move between buffers
 endif
 
-noremap L :bn<cr>
-noremap H :bp<cr>
+noremap <silent> L :bn<cr>
+noremap <silent> H :bp<cr>
 
 "Search and replace the word under the cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
