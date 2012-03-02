@@ -412,10 +412,10 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 map 0 ^
 
 "Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+nmap <C-J> mz:m+<cr>`z
+nmap <C-K> mz:m-2<cr>`z
+vmap <C-J> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <C-K> :m'<-2<cr>`>my`<mzgv`yo`z
 
 if MySys() == "mac"
   nmap <D-j> <M-j>
@@ -546,9 +546,10 @@ if has("gui_running")
     set lines=50 columns=145
 
     " Use Alt-l, Alt-h in the GUI mode to move between buffers
-    map <M-l> :bn<cr>
-    map <M-h> :bp<cr>
 endif
+
+map L :bn<cr>
+map H :bp<cr>
 
 "Search and replace the word under the cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
