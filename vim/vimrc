@@ -390,16 +390,6 @@ endfunction
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Parenthesis/bracket expanding
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-vnoremap $2 <esc>`>a]<esc>`<i[<esc>
-vnoremap $3 <esc>`>a}<esc>`<i{<esc>
-vnoremap $$ <esc>`>a"<esc>`<i"<esc>
-vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $e <esc>`>a"<esc>`<i"<esc>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General Abbrevs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
@@ -452,8 +442,8 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplVSplit = 25
-let g:miniBufExplSplitBelow=1
+"let g:miniBufExplVSplit = 25
+let g:miniBufExplSplitBelow=0
 
 let g:bufExplorerSortBy = "name"
 
@@ -548,8 +538,8 @@ if has("gui_running")
     " Use Alt-l, Alt-h in the GUI mode to move between buffers
 endif
 
-map L :bn<cr>
-map H :bp<cr>
+noremap L :bn<cr>
+noremap H :bp<cr>
 
 "Search and replace the word under the cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>/<C-r><C-w>
@@ -594,9 +584,6 @@ set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
-
-"For tmux
-map <Esc>[B <Down>
 
 "Gundo
 nnoremap <F3> :GundoToggle<CR>
