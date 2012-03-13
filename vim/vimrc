@@ -442,7 +442,9 @@ let g:miniBufExplorerMoreThanOne = 2
 let g:miniBufExplModSelTarget = 0
 let g:miniBufExplUseSingleClick = 1
 let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplVSplit = 25
+if has("gui_running")
+    let g:miniBufExplVSplit = 25
+endif
 let g:miniBufExplSplitBelow=1
 
 let g:bufExplorerSortBy = "name"
