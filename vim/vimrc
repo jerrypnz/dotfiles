@@ -445,7 +445,7 @@ let g:miniBufExplMapWindowNavVim = 1
 if has("gui_running")
     let g:miniBufExplVSplit = 25
 endif
-let g:miniBufExplSplitBelow=1
+let g:miniBufExplSplitBelow=0
 
 let g:bufExplorerSortBy = "name"
 
@@ -562,15 +562,11 @@ let g:fuf_enumeratingLimit = 30
 " Yank ring history file name
 let g:yankring_history_file = '.yankring_history'
 
-nnoremap <silent> sf     :FufCoverageFile!<CR>
-nnoremap <silent> sF     :FufFile!<CR>
-nnoremap <silent> st     :FufTag!<CR>
-nnoremap <silent> sT     :FufTagWithCursorWord!<CR>
-nnoremap <silent> sj     :FufBuffer!<CR>
-nnoremap <silent> so     :FufBufferTag!<CR>
-nnoremap <silent> si     :FufBookmarkDir<CR>
-nnoremap <silent> sI     :FufBookmarkDirAdd<CR>
-nnoremap <silent> sq     :FufQuickfix<CR>
+nnoremap <silent> sf     :CommandT<CR>
+nnoremap <silent> st     :CommandTTag<CR>
+nnoremap <silent> sj     :CommandTBuffer<CR>
+""nnoremap <silent> so     :FufBufferTag!<CR>
+""nnoremap <silent> sq     :FufQuickfix<CR>
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
