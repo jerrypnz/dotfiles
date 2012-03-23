@@ -59,10 +59,6 @@
 "       Snippets for many languages (similar to TextMate's):
 "           info -> :help snipMate
 "
-"     > fuzzyfinder - http://www.vim.org/scripts/script.php?script_id=1984
-"       Find files fast (similar to TextMate's feature):
-"           info -> :help fuzzyfinder@en
-"
 "  Revisions:
 "     > 3.6: Added lots of stuff (colors, Command-T, Vim 7.3 persistent undo etc.)
 "     > 3.5: Paste mode is now shown in status line  if you are in paste mode
@@ -78,6 +74,7 @@
 " => Pathogen config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -554,19 +551,17 @@ noremap <C-a> ggVG
 noremap <C-x> <C-w>c
 noremap <C-q> :Bclose<cr>
 
-" Fuzzyfinder Key bindings
-let g:fuf_modesDisable = []
-let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
-let g:fuf_enumeratingLimit = 30
-
 " Yank ring history file name
 let g:yankring_history_file = '.yankring_history'
 
+" CommandT settings
+let g:CommandTMaxHeight = 10
+let g:CommandTMatchWindowAtTop = 1
+
+" CommandT key mappings
 nnoremap <silent> sf     :CommandT<CR>
 nnoremap <silent> st     :CommandTTag<CR>
 nnoremap <silent> sj     :CommandTBuffer<CR>
-""nnoremap <silent> so     :FufBufferTag!<CR>
-""nnoremap <silent> sq     :FufQuickfix<CR>
 
 "Vim WIKI configurations
 let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
