@@ -555,8 +555,8 @@ noremap <C-q> :Bclose<cr>
 let g:yankring_history_file = '.yankring_history'
 
 " CommandT settings
-let g:CommandTMaxHeight = 10
-let g:CommandTMatchWindowAtTop = 1
+let g:CommandTMaxHeight = 5
+let g:CommandTMinHeight = 5
 
 " CommandT key mappings
 nnoremap <silent> sf     :CommandT<CR>
