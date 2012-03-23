@@ -1,15 +1,20 @@
 [submodule "vim/bundle/vim-colors-solarized.git"]
 	path = vim/bundle/vim-colors-solarized.git
 	url = git://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
 [submodule "vim/bundle/tslime.git"]
 	path = vim/bundle/tslime.git
 	url = https://github.com/xaviershay/tslime.vim
+    ignore = dirty
 [submodule "vim/bundle/fugitive.git"]
 	path = vim/bundle/fugitive.git
 	url = git://github.com/tpope/vim-fugitive.git
+    ignore = dirty
 [submodule "vim/bundle/command-t.git"]
 	path = vim/bundle/command-t.git
 	url = git://git.wincent.com/command-t.git
+    ignore = dirty
 [submodule "vim/bundle/minibufexpl.git"]
 	path = vim/bundle/minibufexpl.git
 	url = git://github.com/fholgado/minibufexpl.vim.git
+    ignore = dirty
