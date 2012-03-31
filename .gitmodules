@@ -14,7 +14,3 @@
 	path = vim/bundle/command-t.git
 	url = git://git.wincent.com/command-t.git
     ignore = dirty
-[submodule "vim/bundle/minibufexpl.git"]
-	path = vim/bundle/minibufexpl.git
-	url = git://github.com/fholgado/minibufexpl.vim.git
-    ignore = dirty
