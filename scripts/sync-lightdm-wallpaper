@@ -13,7 +13,7 @@ if [ ! -f $LIGHTDM_GTK_GREETER ]; then
     exit 0
 fi
 
-wallpaper=$(xpath  $XFCE_DESKTOP_CONF "//property[@name='image-path']/@value" 2>&1 \
+wallpaper=$(xpath  $XFCE_DESKTOP_CONF "//property[@name='image-path']/@value" 2>/dev/null \
     | grep value= \
     | awk -F\" '{print $2}')
 
