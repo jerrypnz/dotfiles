@@ -1,0 +1,26 @@
+#!/bin/bash
+
+XFCE_DESKTOP_CONF=/home/jerry/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+LIGHTDM_GTK_GREETER=/etc/lightdm/lightdm-gtk-greeter.conf
+
+if [ ! -f $XFCE_DESKTOP_CONF ]; then
+    echo "xfce desktop file does not exist"
+    exit 0
+fi
+
+if [ ! -f $LIGHTDM_GTK_GREETER ]; then
+    echo "LightDM GTK Greeter config file not found"
+    exit 0
+fi
+
+wallpaper=$(xpath  $XFCE_DESKTOP_CONF "//property[@name='image-path']/@value" 2>/dev/null \
+    | grep value= \
+    | awk -F\" '{print $2}')
+
+if [ -z "$wallpaper" ]; then
+    echo "xfce wallpaper config not found"
+    exit 0
+fi
+
+sed -i "s#^background=.*#background=$wallpaper#g" $LIGHTDM_GTK_GREETER
+
