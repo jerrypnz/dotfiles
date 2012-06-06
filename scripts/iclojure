@@ -1,0 +1,11 @@
+#!/bin/bash
+
+breakchars="(){}[],^%\$#@\"\";:''|\\"
+
+exec rlwrap --remember -c -b "$breakchars"\
+   -f "$HOME"/.clj_completions\
+   -H "$HOME"/.clj_history\
+   -t "Clojure REPL"\
+   -pgreen\
+   -s 1000\
+   clojure "$@"
