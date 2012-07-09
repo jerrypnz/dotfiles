@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Eclipse
+GenericName=Java EE Development Environment
+Comment=Develop Java EE Applications
+TryExec=eclipse
+Exec=eclipse
+Terminal=false
+Type=Application
+Icon=eclipse
+Categories=Development;
+StartupNotify=true

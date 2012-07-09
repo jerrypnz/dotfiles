@@ -1,0 +1,4 @@
+#!/bin/sh
+
+ECLIPSE_HOME=/opt/eclipse
+exec env GTK2_RC_FILES=$GTK2_RC_FILES:$ECLIPSE_HOME/gtkrc $ECLIPSE_HOME/eclipse
