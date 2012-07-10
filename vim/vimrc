@@ -158,8 +158,8 @@ set shell=/bin/bash
 set nu
 
 if has("gui_running")
-    set guifont=Monaco\ 10
-    set guifontwide=iYahei\ 9
+    set guifont=Ubuntu\ Mono\ 14
+    "set guifontwide=iYahei\ 9
     set guioptions-=T
     set guioptions-=m
     set guioptions-=l
@@ -564,7 +564,7 @@ nnoremap <silent> st     :CommandTTag<CR>
 nnoremap <silent> sj     :CommandTBuffer<CR>
 
 "Vim WIKI configurations
-let g:vimwiki_list = [{}, {'path': '~/document/wiki/src', 'path_html': '~/document/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
+let g:vimwiki_list = [{}, {'path': '~/documents/wiki/src', 'path_html': '~/documents/wiki/', 'auto_export': 1, 'html_header': '~/document/wiki/src/header.tpl', 'html_footer': '~/document/wiki/src/footer.tpl'}]
 let g:vimwiki_camel_case = 0
 let g:vimwiki_html_header_numbering = 2
 let g:vimwiki_html_header_numbering_sym = '.'
