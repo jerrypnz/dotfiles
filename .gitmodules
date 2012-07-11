@@ -17,3 +17,6 @@
 [submodule "vim/bundle/vimclojure.git"]
 	path = vim/bundle/vimclojure.git
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "vim/pathogen.git"]
+	path = vim/pathogen.git
+	url = git://github.com/tpope/vim-pathogen.git
