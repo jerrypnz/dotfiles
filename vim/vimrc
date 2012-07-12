@@ -73,8 +73,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Pathogen config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -619,9 +618,6 @@ EOF
 endfunction
 
 au FileType python map <silent> <leader>tt :call Py_Import_Str()<cr>
-
-" clojure file type auto detect
-au BufNewFile,BufRead *.clj set filetype=clojure
 
 " Fix arrow key under screen
 if &term =~ "screen"
