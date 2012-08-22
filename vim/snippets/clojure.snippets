@@ -1,0 +1,23 @@
+#function
+snippet defn
+	(defn ${1:func} [${2:args}]
+	  ${3:body})
+
+snippet def
+	(def ${1:varname} ${2:nil})
+
+snippet let
+	(let [${1:bindings}]
+	  ${2:body})
+
+snippet letkeys
+	(let [{:keys [${1:keys}]} ${2:expr}]
+	  ${3:body})
+
+snippet map
+	(map ${1:fn} ${2:coll})
+
+snippet mapx
+	(map (fn [${1:args}]
+	       ${2:body}) 
+	     ${3:coll})
