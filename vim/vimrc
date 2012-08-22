@@ -74,6 +74,7 @@
 " => Pathogen config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#infect()
+call pathogen#helptags()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -157,7 +158,7 @@ set shell=/bin/bash
 set nu
 
 if has("gui_running")
-    set guifont=Ubuntu\ Mono\ 14
+    set guifont=Ubuntu\ Mono\ 13
     "set guifontwide=iYahei\ 9
     set guioptions-=T
     set guioptions-=m

@@ -2,3 +2,6 @@ vim/.netrwhist
 vim/undodir/%*
 vim/ftplugin/lisp
 vim/bundle/*/doc/tags
+emacs/auto-save-list
+emacs/backups
+emacs/elpa
