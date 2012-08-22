@@ -12,12 +12,17 @@
     starter-kit-eshell
     starter-kit-bindings
     color-theme-solarized
-    clojure-mode))
+    clojure-mode
+    org
+    org2blog
+    nrepl
+    yasnippet))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
-(load-theme 'solarized-dark t)
-
-
+(mapc 'load (directory-files
+             (concat user-emacs-directory "enabled.d")
+             t
+             "\\.el$"))

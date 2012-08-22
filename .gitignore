@@ -9,3 +9,4 @@ emacs/places
 emacs/swank
 emacs/.smex-items
 emacs/*~
+emacs/url/
