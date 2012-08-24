@@ -1,1 +1,2 @@
-../available.d/colors.el
+;; Color theme
+(load-theme 'solarized-dark t)
