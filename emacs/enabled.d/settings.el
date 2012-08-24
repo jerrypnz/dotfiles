@@ -6,7 +6,8 @@
 (setq auto-save-file-name-transforms
       `((".*" ,my-backup-dir t)))
 
-(make-directory my-backup-dir)
+(if (not (file-accessible-directory-p my-backup-dir))
+    (make-directory my-backup-dir))
 
 ;; Undo tree
 (global-undo-tree-mode)
