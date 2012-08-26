@@ -18,7 +18,10 @@
     org
     org2blog
     nrepl
-    yasnippet))
+    yasnippet
+    undo-tree
+    expand-region
+    ace-jump-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
