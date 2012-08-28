@@ -1,8 +1,8 @@
 #name: beamer
 # --
 #+TITLE:     ${1:Title}
-#+AUTHOR:    ${2:author}
-#+EMAIL:     ${3:email}
+#+AUTHOR:    ${2:Jerry Peng}
+#+EMAIL:     ${3:pr2jerry@gmail.com}
 #+DATE:      ${4:`(format-time-string "%Y-%m-%d")`}
 #+DESCRIPTION: $5
 #+KEYWORDS: $6
@@ -15,8 +15,16 @@
 #+LINK_UP:   
 #+LINK_HOME: 
 #+XSLT:
-#+startup: beamer
-#+LaTeX_CLASS: beamer
-#+LaTeX_CLASS_OPTIONS: [bigger]
+#+STARTUP: beamer
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [bigger]
 #+BEAMER_FRAME_LEVEL: 2
-#+latex_header: \mode<beamer>{\usetheme{Madrid}}\AtBeginSection[]{\begin{frame}<beamer>\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}\usepackage{listings}\usepackage{xeCJK}\setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun}\setCJKmonofont[Scale=0.9]{Ubuntu Mono}\setCJKfamilyfont{song}[BoldFont=SimSun]{SimSun}\setCJKfamilyfont{sf}[BoldFont=SimSun]{SimSun}
+#+LATEX_HEADER: \mode<beamer>{\usetheme{Madrid}}
+#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun}
+#+LATEX_HEADER: \setCJKmonofont[Scale=0.9]{Ubuntu Mono}
+#+LATEX_HEADER: \setCJKfamilyfont{song}[BoldFont=SimSun]{SimSun}
+#+LATEX_HEADER: \setCJKfamilyfont{sf}[BoldFont=SimSun]{SimSun}
+

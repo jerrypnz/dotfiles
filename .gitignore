@@ -10,3 +10,4 @@ emacs/swank
 emacs/.smex-items
 emacs/*~
 emacs/url/
+emacs/eshell/
