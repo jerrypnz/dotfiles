@@ -10,7 +10,7 @@
   (if (eq (forward-line -1) 0)
       (start-newline-next)
     (progn
-      (message "The first line")
+      (message "begin new line at the start")
       (beginning-of-line)
       (newline)
       (forward-line -1))))
