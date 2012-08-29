@@ -12,3 +12,5 @@
 ;; Undo tree
 (global-undo-tree-mode)
 
+(require 'auto-complete-config)
+(ac-config-default)

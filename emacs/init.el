@@ -21,17 +21,13 @@
     yasnippet
     undo-tree
     expand-region
-    ace-jump-mode
-    python-mode
-    ipython
-    pyflakes
-    pylint
-    pymacs
-    pep8))
+    ace-jump-mode))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+(add-to-list 'load-path (concat user-emacs-directory "pymacs-0.25") t)
 
 (mapc 'load (directory-files
              (concat user-emacs-directory "enabled.d")
