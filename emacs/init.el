@@ -21,7 +21,13 @@
     yasnippet
     undo-tree
     expand-region
-    ace-jump-mode))
+    ace-jump-mode
+    python-mode
+    ipython
+    pyflakes
+    pylint
+    pymacs
+    pep8))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
