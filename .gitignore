@@ -11,3 +11,4 @@ emacs/.smex-items
 emacs/*~
 emacs/url/
 emacs/eshell/
+emacs/ac-comphist.dat
