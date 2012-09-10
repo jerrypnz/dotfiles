@@ -20,8 +20,7 @@
     nrepl
     yasnippet
     undo-tree
-    expand-region
-    ace-jump-mode))
+    expand-region))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -33,3 +32,15 @@
              (concat user-emacs-directory "enabled.d")
              t
              "\\.el$"))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("~/org/notes.org"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

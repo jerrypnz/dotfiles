@@ -25,5 +25,4 @@
 
 (global-set-key (kbd "C-o") 'start-newline-next)
 (global-set-key (kbd "M-o") 'start-newline-prev)
-(global-set-key (kbd "C-M-,") 'copy-line-buttom)
 
