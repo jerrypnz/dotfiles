@@ -20,7 +20,8 @@
     nrepl
     yasnippet
     undo-tree
-    expand-region))
+    expand-region
+    auto-complete))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
