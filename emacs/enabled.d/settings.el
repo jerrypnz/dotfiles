@@ -14,3 +14,9 @@
 
 (require 'auto-complete-config)
 (ac-config-default)
+(setq ac-sources (append ac-sources '(ac-source-yasnippet)))
+(add-hook 'python-mode-hook 'ac-ropemacs-setup)
+
+;; nREPL
+(setq nrepl-popup-stacktraces nil)
+(add-hook 'nrepl-mode-hook 'paredit-mode)

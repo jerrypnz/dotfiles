@@ -15,6 +15,8 @@
     starter-kit-bindings
     color-theme-solarized
     clojure-mode
+    python-mode
+    ipython
     org
     org2blog
     nrepl
