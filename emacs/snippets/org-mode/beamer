@@ -28,3 +28,4 @@
 #+LATEX_HEADER: \setCJKfamilyfont{song}[BoldFont=SimSun]{SimSun}
 #+LATEX_HEADER: \setCJKfamilyfont{sf}[BoldFont=SimSun]{SimSun}
 
+$0
