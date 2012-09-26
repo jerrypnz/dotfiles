@@ -23,7 +23,8 @@
     yasnippet
     undo-tree
     expand-region
-    auto-complete))
+    auto-complete
+    textmate))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

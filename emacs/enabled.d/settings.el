@@ -12,11 +12,21 @@
 ;; Undo tree
 (global-undo-tree-mode)
 
+;; Auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
-(setq ac-sources (append ac-sources '(ac-source-yasnippet)))
-(add-hook 'python-mode-hook 'ac-ropemacs-setup)
 
 ;; nREPL
 (setq nrepl-popup-stacktraces nil)
 (add-hook 'nrepl-mode-hook 'paredit-mode)
+
+;; TextMate minor mode
+(eval-after-load 'textmate
+  '(progn
+     (define-key *textmate-mode-map* [(meta return)] nil)))
+
+(textmate-mode)
+(add-to-list '*textmate-project-roots* "project.clj")
+(add-to-list '*textmate-project-roots* "setup.py")
+(add-to-list '*textmate-project-roots* ".ropeproject")
+
