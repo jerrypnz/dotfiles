@@ -21,3 +21,8 @@
          "** TODO %?\n%U\n")
         ("n" "Note" entry (file (concat org-directory "/notes.org"))
          "* %<%D> %^{Title} :NOTE:%^G\n%?")))
+
+(setq org-latex-to-pdf-process 
+  '("xelatex -interaction nonstopmode %f"
+     "xelatex -interaction nonstopmode %f")) ;; for multiple passes
+
