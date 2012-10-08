@@ -13,6 +13,7 @@
     starter-kit-lisp
     starter-kit-eshell
     starter-kit-bindings
+    auto-complete
     color-theme-solarized
     clojure-mode
     python-mode
@@ -20,16 +21,19 @@
     org
     org2blog
     nrepl
+    ac-nrepl
+    nrepl-eval-sexp-fu
+    align-cljlet
     yasnippet
     undo-tree
     expand-region
-    auto-complete
     textmate))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
 
+(add-to-list 'load-path (concat user-emacs-directory "lib") t)
 (add-to-list 'load-path (concat user-emacs-directory "pymacs-0.25") t)
 
 (mapc 'load (directory-files

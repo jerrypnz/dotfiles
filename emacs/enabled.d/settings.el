@@ -12,13 +12,6 @@
 ;; Undo tree
 (global-undo-tree-mode)
 
-;; Auto-complete
-(require 'auto-complete-config)
-(ac-config-default)
-
-;; nREPL
-(setq nrepl-popup-stacktraces nil)
-(add-hook 'nrepl-mode-hook 'paredit-mode)
 
 ;; TextMate minor mode
 (eval-after-load 'textmate
