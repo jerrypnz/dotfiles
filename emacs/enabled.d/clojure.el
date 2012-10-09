@@ -1,9 +1,9 @@
-(eval-after-load 'clojure-mode
-  '(font-lock-add-keywords
-    'clojure-mode `(("(\\(fn\\)[\[[:space:]]"
-                     (0 (progn (compose-region (match-beginning 1)
-                                               (match-end 1) "λ")
-                               nil))))))
+;; (eval-after-load 'clojure-mode
+;;   '(font-lock-add-keywords
+;;     'clojure-mode `(("(\\(fn\\)[\[[:space:]]"
+;;                      (0 (progn (compose-region (match-beginning 1)
+;;                                                (match-end 1) "λ")
+;;                                nil))))))
 
 (eval-after-load 'clojure-mode
   '(font-lock-add-keywords
@@ -78,11 +78,27 @@
               (kbd "}") 'paredit-close-curly)))
 
 (setq nrepl-popup-stacktraces nil)
-(add-to-list 'same-window-buffer-names "*nrepl*")
+;; (add-to-list 'same-window-buffer-names "*nrepl*")
 
 ;;Auto Complete
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+;;(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+;;(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+
+(defun clojure-complete ()
+  (interactive)
+  (auto-complete '(ac-source-nrepl-ns
+                   ac-source-nrepl-vars
+                   ac-source-nrepl-ns-classes
+                   ac-source-nrepl-all-classes
+                   ac-source-nrepl-java-methods
+                   ac-source-nrepl-static-methods)))
+
+(add-hook 'nrepl-mode-hook
+          (lambda ()
+            (local-set-key (kbd "M-/") 'clojure-complete)))
+(add-hook 'nrepl-interaction-mode-hook
+          (lambda ()
+            (local-set-key (kbd "M-/") 'clojure-complete)))
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'nrepl-mode))
 
