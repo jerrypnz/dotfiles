@@ -12,11 +12,11 @@
 ;; Undo tree
 (global-undo-tree-mode)
 
-
 ;; TextMate minor mode
 (eval-after-load 'textmate
   '(progn
-     (define-key *textmate-mode-map* [(meta return)] nil)))
+     (define-key *textmate-mode-map* [(meta return)] nil)
+     (define-key *textmate-mode-map* [(control c)(control k)] nil)))
 
 (textmate-mode)
 (add-to-list '*textmate-project-roots* "project.clj")
