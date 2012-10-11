@@ -95,10 +95,10 @@
 
 (add-hook 'nrepl-mode-hook
           (lambda ()
-            (local-set-key (kbd "M-/") 'clojure-complete)))
+            (local-set-key (kbd "C-M-/") 'clojure-complete)))
 (add-hook 'nrepl-interaction-mode-hook
           (lambda ()
-            (local-set-key (kbd "M-/") 'clojure-complete)))
+            (local-set-key (kbd "C-M-/") 'clojure-complete)))
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'nrepl-mode))
 
