@@ -29,32 +29,21 @@
 
 (setq python-check-command "pyflakes")
 
-(defvar ac-ropemacs-loaded nil)
-(defun ac-ropemacs-require ()
-  (unless ac-ropemacs-loaded
-    ;; Almost people hate rope to use `C-x p'.
-    (if (not (boundp 'ropemacs-global-prefix))
-        (setq ropemacs-global-prefix nil))
-    (pymacs-load "ropemacs" "rope-")
-    (setq ropemacs-enable-autoimport t)
-    (setq ac-ropemacs-loaded t)))
+;; ropemacs completion
+(require 'auto-complete-python)
 
-(defvar ac-ropemacs-completions-cache nil)
+(defun ropemacs-complete ()
+  (interactive)
+  (auto-complete '(ac-source-nropemacs-dot)))
 
-(defvar ac-source-ropemacs
-  '((init
-     . (lambda ()
-         (setq ac-ropemacs-completions-cache
-               (mapcar
-                (lambda (completion)
-                  (concat ac-prefix completion))
-                (ignore-errors
-                  (rope-completions))))))
-    (candidates . (lambda ()
-                    (all-completions ac-prefix ac-ropemacs-completions-cache)))))
+(defun ropemacs-dot-command ()
+  (interactive)
+  (self-insert-command 1)
+  (auto-complete '(ac-source-nropemacs-dot)))
 
-(defun ac-ropemacs-setup ()
-  (ac-ropemacs-require)
-  (add-to-list 'ac-sources 'ac-source-ropemacs))
 
-(add-hook 'python-mode-hook 'ac-ropemacs-setup)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (local-set-key (kbd ".") 'ropemacs-dot-command)
+            (local-set-key (kbd "M-/") 'ropemacs-complete)
+            (local-set-key (kbd "C-M-/" 'hippie-expand))))
