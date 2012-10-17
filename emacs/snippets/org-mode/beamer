@@ -7,25 +7,10 @@
 #+DESCRIPTION: $5
 #+KEYWORDS: $6
 #+LANGUAGE:  ${7:zh_CN}
-#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
-#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
-#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
-#+EXPORT_SELECT_TAGS: export
-#+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:   
-#+LINK_HOME: 
-#+XSLT:
 #+STARTUP: beamer
 #+LATEX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [bigger]
 #+BEAMER_FRAME_LEVEL: 2
-#+LATEX_HEADER: \mode<beamer>{\usetheme{Madrid}}
-#+LATEX_HEADER: \AtBeginSection[]{\begin{frame}<beamer>\frametitle{Topic}\tableofcontents[currentsection]\end{frame}}
-#+LATEX_HEADER: \usepackage{listings}
-#+LATEX_HEADER: \usepackage{xeCJK}
-#+LATEX_HEADER: \setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun}
-#+LATEX_HEADER: \setCJKmonofont[Scale=0.9]{Ubuntu Mono}
-#+LATEX_HEADER: \setCJKfamilyfont{song}[BoldFont=SimSun]{SimSun}
-#+LATEX_HEADER: \setCJKfamilyfont{sf}[BoldFont=SimSun]{SimSun}
+#+BEAMER_HEADER_EXTRA: \mode<beamer>{\usetheme{Madrid}}
 
 $0

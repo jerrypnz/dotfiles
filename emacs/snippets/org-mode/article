@@ -1,6 +1,6 @@
 #name: article
 # --
-#+TITLE:     $1
+#+TITLE:     ${1:Title}
 #+AUTHOR:    ${2:Jerry Peng}
 #+EMAIL:     ${3:pengrui@mobicloud.com.cn}
 #+DATE:      ${4:`(format-time-string "%Y-%m-%d")`}
@@ -9,13 +9,6 @@
 #+LANGUAGE:  ${7:zh_CN}
 #+EXPORT_SELECT_TAGS: export
 #+EXPORT_EXCLUDE_TAGS: noexport
-#+LATEX_CLASS: article
-#+LATEX_HEADER: \hypersetup{colorlinks=true}
-#+LATEX_HEADER: \usepackage{listings}
-#+LATEX_HEADER: \usepackage{xeCJK}
-#+LATEX_HEADER: \setCJKmainfont[BoldFont=SimHei, ItalicFont=KaiTi]{SimSun}
-#+LATEX_HEADER: \setCJKmonofont[Scale=0.9]{Ubuntu Mono}
-#+LATEX_HEADER: \setCJKfamilyfont{song}[BoldFont=SimSun]{SimSun}
-#+LATEX_HEADER: \setCJKfamilyfont{sf}[BoldFont=SimSun]{SimSun}
+#+LATEX_CLASS: ${8:cn-article}
 
 $0
