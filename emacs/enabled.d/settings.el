@@ -38,3 +38,17 @@
   (set (make-local-variable 'truncate-lines) nil))
 (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-trucation)
 
+(require 'yasnippet)
+(yas-global-mode 1)
+
+;; ===== Custom keybindings ====
+;;
+;; Buffer and window switching
+(global-set-key (kbd "C-,") 'previous-buffer)
+(global-set-key (kbd "C-.") 'next-buffer)
+
+;; Find files in current project
+(global-set-key (kbd "C-S-r") 'find-file-in-project)
+
+;; Expand-region
+(global-set-key (kbd "C-=") 'er/expand-region)
