@@ -1,3 +1,6 @@
+;; Color theme
+(load-theme 'solarized-light t)
+
 ;; Change auto-save dir
 (defvar my-backup-dir (concat temporary-file-directory "emacs-backup"))
 
