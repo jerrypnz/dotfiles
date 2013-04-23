@@ -588,37 +588,37 @@ set notimeout
 set ttimeout
 set timeoutlen=50
 
-"Generate import statement and send it to ipython console through tmux
-function! Py_Import_Str()
-python << EOF
-import os.path
-import os
-import vim
-
-def get_py_module(full_path):
-    mod_name = os.path.basename(full_path)
-    pkg_name = ""
-    while True:
-        full_path = os.path.dirname(full_path)
-        if os.path.isfile(os.path.join(full_path, '__init__.py')):
-            if not pkg_name:
-                pkg_name = os.path.basename(full_path)
-            else:
-                pkg_name = os.path.basename(full_path) + "." + pkg_name
-        else:
-            break
-    if pkg_name:
-        return "from %s import %s\n" % (pkg_name, mod_name)
-    else:
-        return "import %s\n" % mod_name
-
-full_path = vim.eval('expand("%<")')
-vim.eval('Send_to_Tmux("%s")' % get_py_module(full_path))
-EOF
-  call system("tmux select-pane -t " . g:tmux_panenumber)
-endfunction
-
-au FileType python map <silent> <leader>tt :call Py_Import_Str()<cr>
+" "Generate import statement and send it to ipython console through tmux
+" function! Py_Import_Str()
+" python << EOF
+" import os.path
+" import os
+" import vim
+" 
+" def get_py_module(full_path):
+"     mod_name = os.path.basename(full_path)
+"     pkg_name = ""
+"     while True:
+"         full_path = os.path.dirname(full_path)
+"         if os.path.isfile(os.path.join(full_path, '__init__.py')):
+"             if not pkg_name:
+"                 pkg_name = os.path.basename(full_path)
+"             else:
+"                 pkg_name = os.path.basename(full_path) + "." + pkg_name
+"         else:
+"             break
+"     if pkg_name:
+"         return "from %s import %s\n" % (pkg_name, mod_name)
+"     else:
+"         return "import %s\n" % mod_name
+" 
+" full_path = vim.eval('expand("%<")')
+" vim.eval('Send_to_Tmux("%s")' % get_py_module(full_path))
+" EOF
+"   call system("tmux select-pane -t " . g:tmux_panenumber)
+" endfunction
+" 
+" au FileType python map <silent> <leader>tt :call Py_Import_Str()<cr>
 
 " Fix arrow key under screen
 if &term =~ "screen"
