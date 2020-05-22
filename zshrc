@@ -46,7 +46,3 @@ export LANG=en_US.UTF-8
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-export PATH="$PATH:/sbin:/usr/sbin:/usr/local/sbin:$HOME/.rvm/bin" # Add RVM to PATH for scripting
